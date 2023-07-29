@@ -13,6 +13,7 @@
 		6C1B6AE92A59905B0088FCD3 /* MovieDetailsDbController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B6AE82A59905B0088FCD3 /* MovieDetailsDbController.swift */; };
 		6C1B6AEC2A5997A80088FCD3 /* MoviesDeleteFatoritosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B6AEB2A5997A80088FCD3 /* MoviesDeleteFatoritosViewModel.swift */; };
 		6C1B6AEF2A5997F50088FCD3 /* MoviesDetailsDbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B6AEE2A5997F50088FCD3 /* MoviesDetailsDbService.swift */; };
+		6C34A90A2A75D63A00E6781B /* MoviesModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C34A9092A75D63A00E6781B /* MoviesModelTest.swift */; };
 		6C6F2FA52A50815E00CA2539 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F2FA42A50815E00CA2539 /* LoginViewModel.swift */; };
 		6C6F2FA82A5081E100CA2539 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F2FA72A5081E100CA2539 /* LoginService.swift */; };
 		6C6F2FAB2A50865600CA2539 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F2FAA2A50865600CA2539 /* Strings.swift */; };
@@ -74,6 +75,7 @@
 		6C1B6AE82A59905B0088FCD3 /* MovieDetailsDbController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsDbController.swift; sourceTree = "<group>"; };
 		6C1B6AEB2A5997A80088FCD3 /* MoviesDeleteFatoritosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDeleteFatoritosViewModel.swift; sourceTree = "<group>"; };
 		6C1B6AEE2A5997F50088FCD3 /* MoviesDetailsDbService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsDbService.swift; sourceTree = "<group>"; };
+		6C34A9092A75D63A00E6781B /* MoviesModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModelTest.swift; sourceTree = "<group>"; };
 		6C6F2FA42A50815E00CA2539 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6C6F2FA72A5081E100CA2539 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		6C6F2FAA2A50865600CA2539 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC63B2B28AC42C000168D90 /* Movies.swift */,
+				6C34A9092A75D63A00E6781B /* MoviesModelTest.swift */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C34A90A2A75D63A00E6781B /* MoviesModelTest.swift in Sources */,
 				7AC63B2C28AC42C000168D90 /* Movies.swift in Sources */,
 				7AC63B2E28AC42C000168D90 /* final_projectUITestsLaunchTests.swift in Sources */,
 			);
