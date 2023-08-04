@@ -19,11 +19,6 @@ class MovieDetailsController: UIViewController, Coordinating {
           return viewModel
      }()
      
-     lazy var favoriteViewModel: FavoritarViewMode = {
-          let viewModel = FavoritarViewMode(service: FavoritarService())
-          viewModel.delegate = self
-          return viewModel
-     }()
      
      private lazy var uiView: UIView = {
           let uiView = UIView()
@@ -94,26 +89,6 @@ class MovieDetailsController: UIViewController, Coordinating {
           return label
      }()
      
-     private lazy var buttonFavoritar: UIButton = {
-          let button = UIButton()
-          button.setTitle("Adicionar aos Favoritos", for: .normal)
-          button.setTitleColor(.gray, for: .normal)
-          button.titleLabel?.textAlignment = .center
-          button.backgroundColor = .black
-          button.layer.cornerRadius = 20.0
-          button.layer.borderWidth = 2.0
-          button.layer.borderColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5).cgColor
-          button.titleLabel?.font = UIFont(name: "Helvetica", size: 16)
-          button.tintColor = .gray
-          
-          let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 40))
-          button.addSubview(paddingView)
-          button.translatesAutoresizingMaskIntoConstraints = false
-          button.addTarget(self, action: #selector(favoritarButton), for: .touchUpInside)
-          return button
-     }()
-     
-     
      private lazy var spinner: UIActivityIndicatorView = {
           let view = UIActivityIndicatorView()
           view.style = .large
@@ -121,25 +96,6 @@ class MovieDetailsController: UIViewController, Coordinating {
           view.startAnimating()
           return view
      }()
-     
-     @objc private func favoritarButton() {
-          let title = self.viewModel.movie?.title ?? ""
-          let sinopse = self.viewModel.movie?.overview ?? ""
-          let pontuacaoMedia = String(self.viewModel.movie?.voteAverage ?? 0.0)
-          let totalVotos = String(self.viewModel.movie?.voteCount ?? 0)
-          let imagem = self.viewModel.movie?.posterPath ?? ""
-          let imagemDeFundo = self.viewModel.movie?.backdropPath ?? ""
-          
-          if title.isEmpty || sinopse.isEmpty || pontuacaoMedia.isEmpty || totalVotos.isEmpty || imagem.isEmpty || imagemDeFundo.isEmpty {
-               let alert = UIAlertController(title: "Atenção", message: "Dados invalidos", preferredStyle: .alert)
-               let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-               alert.addAction(action)
-               present(alert, animated: true, completion: nil)
-               return
-          } else {
-               favoriteViewModel.postFavoritar(title: title, sinopse: sinopse, pontuacaoMedia: pontuacaoMedia, totalVotos: totalVotos, imagem: imagem, imagemDeFundo: imagemDeFundo)
-          }
-     }
      
      var movie: MovieDetails? {
           return viewModel.movie
@@ -210,23 +166,6 @@ class MovieDetailsController: UIViewController, Coordinating {
      }
 }
 
-extension MovieDetailsController: FavoritarViewModelDelegate {
-     
-     func presentSuccess(success: String) {
-          let alert = UIAlertController(title: "Atenção", message: success, preferredStyle: .alert)
-          let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-          alert.addAction(action)
-          present(alert, animated: true, completion: nil)
-     }
-     
-     func presentError(error: String){
-          let alert = UIAlertController(title: "Atenção", message: error, preferredStyle: .alert)
-          let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-          alert.addAction(action)
-          present(alert, animated: true, completion: nil)
-     }
-}
-
 extension MovieDetailsController: ViewCoding {
      
      func bindSetup() {
@@ -243,7 +182,7 @@ extension MovieDetailsController: ViewCoding {
           self.uiView2.addSubview(voteAverage)
           self.uiView2.addSubview(voteCount)
           self.uiView2.addSubview(summary)
-          self.uiView.addSubview(buttonFavoritar)
+
      }
      
      func buildConstrantis() {
@@ -276,13 +215,7 @@ extension MovieDetailsController: ViewCoding {
                
                summary.topAnchor.constraint(equalTo: voteCount.bottomAnchor, constant: 16),
                summary.leadingAnchor.constraint(equalTo: uiView2.leadingAnchor, constant: 20),
-               summary.trailingAnchor.constraint(equalTo: uiView2.trailingAnchor, constant: -20),
-               
-               buttonFavoritar.heightAnchor.constraint(equalToConstant: 50),
-               buttonFavoritar.topAnchor.constraint(equalTo: uiView2.bottomAnchor, constant: 10),
-               buttonFavoritar.leadingAnchor.constraint(equalTo: uiView.leadingAnchor, constant: 10),
-               buttonFavoritar.trailingAnchor.constraint(equalTo: uiView.trailingAnchor, constant: -10),
-               buttonFavoritar.bottomAnchor.constraint(equalTo: uiView.bottomAnchor, constant: -10)
+               summary.trailingAnchor.constraint(equalTo: uiView2.trailingAnchor, constant: -20)
                
           ])
      }

@@ -9,7 +9,6 @@ import UIKit
 
 class MainCoordinator: Coordinator {
      var navigationController: UINavigationController?
-     //    var childCoordinators = [Coordinator]()
      
      func start() {
           startWithViewCode()
@@ -17,11 +16,6 @@ class MainCoordinator: Coordinator {
      
      func navigate(to route: Routes, data: Any?) {
           switch route {
-               
-          case .login:
-               let vc = LoginController()
-               vc.coordinator = self
-               navigationController?.pushViewController(vc, animated: true)
                
           case .moviesDetails:
                guard let movieId = data as? String else { return }
@@ -31,16 +25,6 @@ class MainCoordinator: Coordinator {
                
           case .moviesList:
                let vc = MoviesListController()
-               vc.coordinator = self
-               navigationController?.pushViewController(vc, animated: true)
-               
-          case .moviesDbList:
-               let vc = MoviesListDbController()
-               vc.coordinator = self
-               navigationController?.pushViewController(vc, animated: true)
-               
-          case .moviesDetailsDb(let movie):
-               let vc = MovieDetailsDbController(movie: movie)
                vc.coordinator = self
                navigationController?.pushViewController(vc, animated: true)
           }
@@ -57,7 +41,7 @@ class MainCoordinator: Coordinator {
      }
      
      private func startWithViewCode() {
-          let vc = LoginController()
+          let vc = MoviesListController()
           vc.coordinator = self
           navigationController?.setViewControllers([vc], animated: false)
      }

@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "31B8C39F-A0E4-4B37-B005-F2952385179F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "final_project/View/MoviesDetails/MoviesDetailsController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "favoritarButton()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3916523F-AE4D-4595-9582-E671EDBC8BF9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -461,54 +445,6 @@
                   startingLineNumber = "63"
                   endingLineNumber = "63"
                   offsetFromSymbolStart = "388">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "699282A1-9223-4FCF-ADBE-1F45E9912D57"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "final_project/View/MoviesDetails/MoviesDetailsController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "favoritarButton()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "699282A1-9223-4FCF-ADBE-1F45E9912D57 - 5d982df8486f1063"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "final_project.MovieDetailsController.favoritarButton() -&gt; ()"
-                  moduleName = "final_project"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wellingtonmartins/Documents/Trabalhos%20ios%20PucMinas/projeto%20proff/aula_ios_avancado_exercicio_mvvm/final_project/View/MoviesDetails/MoviesDetailsController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "1812">
-               </Location>
-               <Location
-                  uuid = "699282A1-9223-4FCF-ADBE-1F45E9912D57 - 5d982df8486f1063"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "final_project.MovieDetailsController.favoritarButton() -&gt; ()"
-                  moduleName = "final_project"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wellingtonmartins/Documents/Trabalhos%20ios%20PucMinas/projeto%20proff/aula_ios_avancado_exercicio_mvvm/final_project/View/MoviesDetails/MoviesDetailsController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
-                  offsetFromSymbolStart = "1796">
                </Location>
             </Locations>
          </BreakpointContent>

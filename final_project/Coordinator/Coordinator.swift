@@ -8,12 +8,9 @@
 import UIKit
 
 enum Routes {
-     
-     case login
+
      case moviesList
      case moviesDetails
-     case moviesDbList
-     case moviesDetailsDb(movie: MovieListDb)
      
 }
 

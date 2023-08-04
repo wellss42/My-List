@@ -61,7 +61,7 @@ class MoviesListController: UIViewController, Coordinating {
      }()
      
      @objc private func favoritos() {
-          coordinator?.navigate(to: .moviesDbList, data: nil)
+//          coordinator?.navigate(to: .moviesDbList, data: nil)
      }
      
      // BIND GET SETUP
